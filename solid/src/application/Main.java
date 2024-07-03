@@ -1,4 +1,4 @@
-package factory_method;
+package application;
 
 public class Main {
 
