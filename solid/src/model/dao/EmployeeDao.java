@@ -1,5 +1,7 @@
 package model.dao;
 
+import java.util.List;
+
 import model.entities.Employee;
 
 public interface EmployeeDao {
@@ -11,6 +13,7 @@ public interface EmployeeDao {
 	public void editEmployee(Employee employee);
 	
 	public void removeEmployee(Employee employee);
-	
+
+	public List<Employee> getAll();
 
 }

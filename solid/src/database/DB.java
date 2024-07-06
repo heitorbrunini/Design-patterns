@@ -32,7 +32,4 @@ public class DB {
 		this.tb_employee = tb_employee;
 	} 
 	
-	
-	
-	
 }

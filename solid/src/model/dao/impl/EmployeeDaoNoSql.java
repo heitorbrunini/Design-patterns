@@ -1,5 +1,7 @@
 package model.dao.impl;
 
+import java.util.List;
+
 import database.DB;
 import model.dao.EmployeeDao;
 import model.entities.Employee;
@@ -23,10 +25,7 @@ public class EmployeeDaoNoSql implements EmployeeDao{
 				db.getTb_employee().set(i, employee);
 				break;
 			}
-
 		}
-		
-		
 	}
 
 	@Override
@@ -39,7 +38,6 @@ public class EmployeeDaoNoSql implements EmployeeDao{
 				break;
 			}	
 		}
-		
 	}
 
 	@Override
@@ -53,5 +51,11 @@ public class EmployeeDaoNoSql implements EmployeeDao{
 		}
 		return null;
 	}
+
+	@Override
+	public List<Employee> getAll() {
+		return db.getTb_employee();
+	}
+	
 
 }

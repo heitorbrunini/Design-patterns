@@ -34,7 +34,6 @@ public class TaskDaoNoSql implements TaskDao{
 
 	@Override
 	public Task getTask(Employee employee) {
-		
 		return employee.getTask();
 	}
 	
