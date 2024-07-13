@@ -1,4 +1,6 @@
-package product;
+package product.concrete;
+
+import product.Chair;
 
 public class VictorianChair implements Chair {
 
@@ -23,6 +25,11 @@ public class VictorianChair implements Chair {
 	public void getUp() {
 		this.occupied = false;
 		
+	}
+
+	@Override
+	public void type() {
+		System.out.println("im victorian");		
 	}
 
 }

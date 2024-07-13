@@ -7,5 +7,7 @@ public interface Chair {
 	public void sitOn();
 	
 	public void getUp();
+	
+	public void type();
 
 }

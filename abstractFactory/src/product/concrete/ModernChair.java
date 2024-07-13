@@ -1,4 +1,6 @@
-package product;
+package product.concrete;
+
+import product.Chair;
 
 public class ModernChair implements Chair {
 	
@@ -35,6 +37,12 @@ public class ModernChair implements Chair {
 		while(batery<100) {
 			batery++;
 		}
+	}
+
+	@Override
+	public void type() {
+		System.out.println("im modern");
+		
 	}
 
 }
