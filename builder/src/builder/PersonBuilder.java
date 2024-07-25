@@ -1,12 +1,13 @@
 package builder;
 
+import entities.Person;
+
 public interface PersonBuilder {
 	
-	public void setSex();
-	public void setName();
-	public void setAge();
+	public Person getPerson(String name, Integer Age);
+	public void setGender();
+	public void setName(String name);
+	public void setAge(Integer age);
 	public void setDateSignIn();
 	
-	
-
 }
