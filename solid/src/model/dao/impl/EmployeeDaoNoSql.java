@@ -3,21 +3,18 @@ package model.dao.impl;
 import java.util.List;
 
 import database.DB;
-import model.dao.EmployeeDao;
 import model.entities.Employee;
 //SRP, DIP
-public class EmployeeDaoNoSql implements EmployeeDao{
+public class EmployeeDaoNoSql {
 	
 	DB db = DB.getInstance();
 
-	@Override
-	public void addEmployee(Employee employee) {
+	public void addEmployeeList(Employee employee) {
 		db.getTb_employee().add(employee);
 		
 	}
 
-	@Override
-	public void editEmployee(Employee employee) {
+	public void editEmployeeList(Employee employee) {
 		
 		for (int i = 0; i < db.getTb_employee().size(); i++) {
 
@@ -28,8 +25,7 @@ public class EmployeeDaoNoSql implements EmployeeDao{
 		}
 	}
 
-	@Override
-	public void removeEmployee(Employee removeEmployee) {
+	public void removeEmployeeList(Employee removeEmployee) {
 		
 		for (int i = 0; i < db.getTb_employee().size(); i++) {
 
@@ -40,8 +36,7 @@ public class EmployeeDaoNoSql implements EmployeeDao{
 		}
 	}
 
-	@Override
-	public Employee getEmployee(Integer id) {
+	public Employee getEmployeeList(Integer id) {
 		for (int i = 0; i < db.getTb_employee().size(); i++) {
 
 			if ( db.getTb_employee().get(i).getId() == id ) {
@@ -52,8 +47,7 @@ public class EmployeeDaoNoSql implements EmployeeDao{
 		return null;
 	}
 
-	@Override
-	public List<Employee> getAll() {
+	public List<Employee> getAllList() {
 		return db.getTb_employee();
 	}
 	

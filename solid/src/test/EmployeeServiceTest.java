@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import model.dao.EmployeeDao;
 import model.dao.TaskDao;
-import model.dao.impl.EmployeeDaoNoSql;
+import model.dao.impl.AdapterEmployeeDaoNoSql;
 import model.dao.impl.TaskDaoNoSql;
 import model.entities.CltEmployee;
 import model.entities.Employee;
@@ -13,7 +13,7 @@ import model.services.EmployeeService;
 
 class EmployeeServiceTest {
 
-	EmployeeDao empRepository = new EmployeeDaoNoSql();
+	EmployeeDao empRepository = new AdapterEmployeeDaoNoSql();
 	TaskDao taskRepository = new TaskDaoNoSql();
 
 	EmployeeService service = new EmployeeService(taskRepository, empRepository);
